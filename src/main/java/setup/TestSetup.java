@@ -11,17 +11,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-public class TestSetup 
+public class TestSetup
 {
 	protected WebDriver driver = null;
 
 
 	@BeforeSuite(alwaysRun = true)
 	public void setUp() {
-
-		WebDriverManager.chromedriver().setup();
 
 	}
 
@@ -40,8 +36,6 @@ public class TestSetup
 		}
 
 	}
-
-
 
 	@AfterMethod(alwaysRun = true)
 	public synchronized void afterMethod(ITestResult result) {
